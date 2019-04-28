@@ -1,0 +1,27 @@
+li{
+	list-style:none;
+}
+li span{
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+li span+ul{/*step1：定义了子菜单的起始样式*/
+  height:75px;  /*起始css属性*/
+  opacity:1;
+  overflow:hidden;/*内容隐藏*/
+  transition:all .5s linear;/*添加过渡动画*/
+}
+
+.open{ background: url("../img/minus.png") no-repeat center left; }
+.closed{ background: url("../img/add.png") no-repeat center left; }
+.show{ display: block; }
+/*.hide{ display: none; }*/
+
+/*step2：定义目标样式，用于在程序中切换*/
+.hide{/*设置目标样式的css属性*/
+  height:0;
+  opacity:0;
+}
+
+/*step3:根据条件，切换动画元素上的class*/
